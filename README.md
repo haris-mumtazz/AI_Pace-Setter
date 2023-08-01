@@ -5,7 +5,7 @@ This README was last modified on __July 31st, 2023__
 <p align="center">
   <img src="media/Second.gif">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="media/Second.gif">
+  <img src="media/Third.gif">
 </p>
 
 
