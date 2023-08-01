@@ -33,34 +33,33 @@ git clone https://github.com/haris-mumtazz/AI_Pace-Setter
 #### 1. Open terminal
    
 #### 2. Check Camera ID
-   ```console
+```console
    ls /dev/video*
-   ```
+```
+It will return like '/dev/video0' which is the id of the camera connected
+or '/dev/video0 /dev/video1' if 2 cameras connected
 
-    It will return like '/dev/video0' which is the id of the camera connected
-    or '/dev/video0 /dev/video1' if 2 cameras connected
-
-    Then copy and paste the id e.g. '/dev/video0' to line 19 in main.py if you use USB CAM;
-    or if you use CSI CAM, just comment line 19, and uncomment line 21 (default).
+Then copy and paste the id e.g. '/dev/video0' to line 19 in main.py if you use USB CAM;
+or if you use CSI CAM, just comment line 19, and uncomment line 21 (default).
 
 #### 3. RUN
-    ```console
+```console
     cd Desktop/AI-pace-setter-main
     source IOTenv/bin/activate
     python main.py
-    ```
+```
 #### 4. TROUBLESHOOTING
 
 ##### a. If you get 'nonetype' error message:
 
-    ```console
+```console
     deactivate
     source IOTenv/bin/activate
     python main.py
-    ```
+```
 
 ##### b. If you still get error, reboot the jetson nano and restart
-    ```console
+```console
     deactivate
     sudo reboot
-    ```
+```
