@@ -57,8 +57,13 @@ or if you use CSI CAM, just comment line 19, and uncomment line 21 (default).
 ```console
 cd Desktop/AI-pace-setter-main
 source IOTenv/bin/activate
-python main.py
+python3 main.py
 ```
+Or 
+```console
+python3 main.py
+```
+
 #### 4. TROUBLESHOOTING
 
 ##### a. If you get 'nonetype' error message:
@@ -66,7 +71,7 @@ python main.py
 ```console
 deactivate
 source IOTenv/bin/activate
-python main.py
+python3 main.py
 ```
 
 ##### b. If you still get error, reboot the jetson nano and restart
