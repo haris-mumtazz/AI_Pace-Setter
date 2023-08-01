@@ -1,10 +1,10 @@
 > Python version: 3.7 \
 This README was last modified on __July 31st, 2023__
-# AI-pace-setter
+# AI_Pace-Setter
 
 ## Overview
 
-Building an AI pace setter for blind people and deploying the model into Jetson Nano. Firstly, the camera will capture photos from the webcam. And upload the image into GCP. Object detection of images will be done by Cloud Vision API. If there is any obstacle on the left, generated to mp3 by Cloud Text To Speech API and play a voice message: “ Be careful, turn right”; vice versa.
+An AI pace setter or object identifier using Jetson Nano. Firstly, the camera will capture photos from the webcam. Object detection of images will be done using the TensorFlow framework. If an obstacle is on the right, the screen will prompt you to turn left and vice versa.
 
 ## Table of Contents
 
@@ -26,49 +26,9 @@ Building an AI pace setter for blind people and deploying the model into Jetson 
 
 ## Architecture Design
 
-- Google Cloud Platform
 - PyCharm (Python)
 
 ## Step By Step Guide
-
-### 1. Google Cloud Version Setting - Create Service Key
-Service accounts are used by applications to make **authorised APIs** calls on the Google Cloud Platform(GCP). In order for the IoT Cloud Tester application to interact with GCP through APIs, the service account for the project is required.
-
-Step 1: Enter “**Go to project setting**” in the Dashboard of the project
-
-<img width="300" alt="Screenshot 2022-08-22 at 17 19 08" src="https://user-images.githubusercontent.com/107612464/186062295-3f4ecd24-75d4-4e4d-8360-ed53d8a22e61.png">
-
-Step 2:  Create New Service Account
-
-<img width="300" alt="Screenshot 2022-08-22 at 17 22 47" src="https://user-images.githubusercontent.com/107612464/186062463-782d31d7-4e6f-4505-aebf-fae1569de1c2.png">
-
-Step 3: Choose your name of service account
-
-<img width="300" alt="Screenshot 2022-08-22 at 17 25 49" src="https://user-images.githubusercontent.com/107612464/186062571-3232f739-eb1f-4da1-a562-4c0380c5e1b1.png">
-
-Step 4: Select the Newly Created Service Account
-
-<img width="300" alt="Screenshot 2022-08-22 at 17 30 52" src="https://user-images.githubusercontent.com/107612464/186062609-55cf2d6c-55af-4b36-b7fd-2a227af436d4.png">
-
-Step 5: Click “Create New Key”
-
-<img width="300" alt="Screenshot 2022-08-22 at 17 33 33" src="https://user-images.githubusercontent.com/107612464/186063043-426b67ba-6821-4bb2-b137-49558bc3b175.png">
-
-Step 6: Generate the service account JSON key and download
-
-<img width="300" alt="Screenshot 2022-08-22 at 17 36 52" src="https://user-images.githubusercontent.com/107612464/186063085-90fc0166-c967-4c5a-bfdc-883e8389540c.png">
-
-### 2. Google Cloud Setting - Enable GCP API 
-- Cloud Vision API
-
-<img width="300" alt="Screenshot 2022-08-23 at 11 07 48" src="https://user-images.githubusercontent.com/107612464/186063214-2eabe175-e66e-4c95-9f49-3db61ab8f266.png">
-
-- Text-to-speech API
-<img width="300" alt="Screenshot 2022-08-23 at 11 16 03" src="https://user-images.githubusercontent.com/107612464/186063553-acd84862-140f-48b0-b02b-8d37185a2a4d.png">
-
-- Cloud Translation API
-
-<img width="300" alt="Screenshot 2022-08-23 at 11 16 08" src="https://user-images.githubusercontent.com/107612464/186063672-df7ef972-3000-4d74-b624-85d55d9c1546.png">
 
 ### 3. Raspberry Pi Environment Setup
 #### Install the below packages using apt-get __before__ pip installing `requirements.txt`
