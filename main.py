@@ -15,8 +15,6 @@ print(namelist)
 
 net = jetson.inference.detectNet("ssd-mobilenet-v2", threshold=0.7)
 display = jetson.utils.videoOutput("display://0")
-output_file_path = "output.mp4"
-recording_output = jetson.utils.videoOutput(output_file_path)
 # usb camera
 # camera =  jetson.utils.videoSource("/dev/video0") 
 # csi camera:  csi://0
@@ -100,8 +98,5 @@ while display.IsStreaming():
     font.OverlayText(displayImage, img.width, img.height, "Number of Objects: {}".format(right_count), img.width // 2 + 250, 10, (255, 0, 0), (0, 0, 0))
     display.Render(displayImage)
     display.SetStatus("Object Detection | Network {:.0f} FPS".format(net.GetNetworkFPS()))
-    recording_output.Render(displayImage)
 
 display.Close()
-recording_output.CLose()
-
