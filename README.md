@@ -3,8 +3,12 @@ This README was last modified on __July 31st, 2023__
 # AI_Pace-Setter
 
 <p align="center">
+  <img width="600" height="473" src="media/result.gif">
+</p>
+
+<p align="center">
   <img src="media/Second.gif">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="media/Third.gif">
 </p>
 
