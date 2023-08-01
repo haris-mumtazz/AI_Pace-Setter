@@ -2,6 +2,10 @@
 This README was last modified on __July 31st, 2023__
 # AI_Pace-Setter
 
+<p align="center">
+  <img width="500" height="373" src="media/second.gif">
+</p>
+
 ## Overview
 
 An AI pace setter or object identifier using Jetson Nano. Firstly, the camera will capture photos from the webcam. Object detection of images will be done using the TensorFlow framework. If an obstacle is on the right, the screen will prompt you to turn left and vice versa.
