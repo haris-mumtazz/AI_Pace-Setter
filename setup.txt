@@ -1,0 +1,42 @@
+1.	Open terminal. Refer to this https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md#compiling-the-project
+
+2.	Make sure git and cmake and other libraries are installed
+a.	sudo apt-get update
+b.	sudo apt-get install git cmake libpython3-dev python3-numpy python-pip
+c.      sudo pip install playsound
+
+3.	Clone the jetson-inference project
+a.	cd Desktop
+b.	git clone --recursive --depth=1 https://github.com/dusty-nv/jetson-inference
+c.	sudo apt-get install libpython3-dev 
+d.	cd jetson-inference
+
+4.	Create a build directory within the project and run cmake to configure the build. When cmake is run, a script is launched (CMakePreBuild.sh) that will install any required dependencies and download DNN models. 
+a.	mkdir build
+b.	cd build
+c.	cmake ../
+
+5.	Build the libraries, Python extension bindings, and code samples (Make sure you are still in the jetson-inference/build)
+a.	make -j$(nproc)
+b.	sudo make install
+c.	sudo ldconfig
+
+6.	Copy these files into the IOT virtual environment 
+a.	cd  #skip this step if already in home directory
+b.	cp /usr/lib/python3.6/dist-packages/jetson_inference_python.so Desktop/AI-pace-setter-main/IOTenv/lib/python3.6/site-packages
+c.	cp /usr/lib/python3.6/dist-packages/jetson_utils_python.so Desktop/AI-pace-setter-main/IOTenv/lib/python3.6/site-packages
+d.	cp -r /usr/lib/python3.6/dist-packages/jetson Desktop/AI-pace-setter-main/IOTenv/lib/python3.6/site-packages
+e.	cp -r /usr/lib/python3.6/dist-packages/Jetson Desktop/AI-pace-setter-main/IOTenv/lib/python3.6/site-pack
+
+7.	Install numpy
+pip install numpy==1.19.4
+
+8.	Run
+a.	cd Desktop/AI-pace-setter-main
+b.	source IOTenv/bin/activate
+c.	python main.py
+
+sudo systemctl restart nvargus-daemon
+sudo sh -c 'echo 100 > /sys/devices/pwm-fan/target_pwm'
+sudo fuser -v /dev/video0
+sudo kill

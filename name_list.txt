@@ -1,0 +1,24 @@
+person
+mouse
+bicycle
+car
+motorcycle
+bus
+train
+truck
+traffic light
+fire hydrant
+bench
+backpack
+suitcase
+sports ball
+skateboard
+bottle
+chair
+potted plant
+dining table
+window
+desk
+door
+cell phone
+refrigerator

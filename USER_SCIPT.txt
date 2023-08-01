@@ -1,0 +1,28 @@
+0. Open terminal
+
+1. CHECK CAMERA ID
+ls /dev/video*
+
+It will return like '/dev/video0' which is the id of camera connected
+or '/dev/video0 /dev/video1' if 2 cameras connected
+
+Then copy and paste the id e.g. '/dev/video0' to line 19 in main.py if you use USB CAM;
+or if you use CSI CAM, just comment line 19, uncomment line 21 (default).
+
+2. RUN
+cd Desktop/AI-pace-setter-main
+source IOTenv/bin/activate
+python main.py
+
+3. TROUBLESHOOTING
+
+a. if got 'nonetype' in error message:
+
+deactivate
+source IOTenv/bin/activate
+python main.py
+
+b. if still error, reboot the jetson nano and restart
+
+deactivate
+sudo reboot
